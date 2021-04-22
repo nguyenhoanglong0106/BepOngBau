@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+    <include  layout="@layout/layout_background_view"></include>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtTieuDeDangKy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size10dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/dangky"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/size30sp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:inputType="textPersonName"
+            android:id="@+id/edTenDangNhapDK"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50dp"
+            android:background="@color/colorWhite"
+            android:hint="@string/tendangnhap"
+            android:textColorHint="@color/black"
+            android:padding="@dimen/size10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:singleLine="true"
+            tools:ignore="Autofill,TextFields"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/edMatKhauDK"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50dp"
+            android:background="@color/colorWhite"
+            android:hint="@string/nhapmatkhau"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="@dimen/size10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:drawablePadding="@dimen/size10dp"
+            android:password="true"
+            tools:ignore="Autofill,Deprecated,TextFields" />
+        <RadioGroup
+            android:id="@+id/rgGioiTinhDK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/rdNam"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam"
+                android:layout_marginEnd="@dimen/size10dp"
+                android:textColor="@color/colorBlack"/>
+            <RadioButton
+                android:id="@+id/rdNu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nữ"
+                android:textColor="@color/colorBlack"/>
+        </RadioGroup>
+        <EditText
+            android:id="@+id/edtHoVaTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:hint="@string/Hovaten"
+            android:textColorHint="@color/black"
+            android:padding="@dimen/size10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            tools:ignore="Autofill" />
+        <EditText
+            android:id="@+id/edNgaySinhDK"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size50dp"
+            android:background="@color/colorWhite"
+            android:hint="@string/ngaysinh"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
+            android:padding="@dimen/size10dp"
+            android:inputType="date"
+            android:editable="false"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="10dp"
+            android:focusable="false"
+            tools:ignore="Autofill,Deprecated,TextFields" />
+
+        <EditText
+            android:id="@+id/edtSodienThoai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:hint="@string/sdt"
+            android:textColorHint="@color/black"
+            android:padding="@dimen/size10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            tools:ignore="Autofill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+
+            <Button
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/btnDongYDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dongy"
+                android:textColor="@color/colorWhite"
+                android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                tools:ignore="ButtonStyle"/>
+            <Button
+                android:layout_marginHorizontal="10dp"
+                android:id="@+id/btnThoatDK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/thoat"
+                android:layout_weight="1"
+                android:background="@color/colorRed"
+                android:textColor="@color/colorWhite"
+                tools:ignore="ButtonStyle" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "559542467145",
+    "firebase_url": "https://bepongbau-default-rtdb.firebaseio.com",
+    "project_id": "bepongbau",
+    "storage_bucket": "bepongbau.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559542467145:android:83bab53dc496163f8ddd98",
+        "android_client_info": {
+          "package_name": "com.example.bepongbau"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559542467145-47so2dq86t6k4balselg692f861ou42v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0txcecwwVkteMhOS8XnhEAxDz0X-b4_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559542467145-47so2dq86t6k4balselg692f861ou42v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
