@@ -36,7 +36,6 @@
 
     <ImageView
         android:id="@+id/item5"
-
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_width="240dp"

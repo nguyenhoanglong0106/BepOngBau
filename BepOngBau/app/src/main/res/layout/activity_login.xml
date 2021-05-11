@@ -21,8 +21,8 @@
             android:textSize="@dimen/size30sp"
             android:textStyle="bold"
             android:layout_marginBottom="30dp"/>
-
         <EditText
+
             android:inputType="textAutoCorrect"
             android:id="@+id/edTenDangNhapDN"
             android:layout_width="match_parent"
@@ -37,8 +37,8 @@
             android:singleLine="true"
             android:textColor="@color/black"
             tools:ignore="Autofill,TextFields" />
-
         <EditText
+
             android:id="@+id/edMatKhauDN"
             android:layout_width="match_parent"
             android:layout_height="@dimen/size50dp"
@@ -53,7 +53,16 @@
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             tools:ignore="Autofill,Deprecated,TextFields" />
-
+        <TextView
+            android:textSize="16dp"
+            android:padding="5dp"
+            android:layout_marginHorizontal="30dp"
+            android:gravity="right"
+            android:id="@+id/hintPassword"
+            android:text="Hiện mật khẩu?"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </TextView>
         <Button
             android:id="@+id/btnDongYDN"
             android:layout_width="match_parent"

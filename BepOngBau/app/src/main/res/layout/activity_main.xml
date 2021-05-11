@@ -5,42 +5,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/DrawerLayout"
         android:fitsSystemWindows="true"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                android:background="#2196F3"
-                android:id="@+id/toolbar">
-                <TextView
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:gravity="center"
-                    android:text="Màn hình chính"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                </TextView>
-            </androidx.appcompat.widget.Toolbar>
             <LinearLayout
+                android:background="#FFB29A"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text="Nội dung"/>
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="12">
+                    <TextView
+                        android:paddingLeft="20dp"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="10dp"
+                        android:text="BẾP ÔNG BẦU"
+                        android:paddingHorizontal="10dp"
+                        android:textSize="30dp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/white">
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <LinearLayout
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/RecyclerViewImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:background="@color/colorBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
             </LinearLayout>
-        </LinearLayout>
         <com.google.android.material.navigation.NavigationView
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="match_parent"
             android:layout_gravity="start"
             android:fitsSystemWindows="true"
@@ -49,21 +75,33 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-                <ImageView
-                    android:src="@drawable/ic_baseline_menu_24"
+                <LinearLayout
+                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"></ImageView>
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <ListView
-                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:id="@+id/list_item_navigation"
-                    android:layout_marginTop="30dp"
-                    ></ListView>
+                    android:layout_weight="6">
+                    <ImageView
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:layout_gravity="center_vertical"
+                        android:background="#D5F3B1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/amtion">
+                    </ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2">
+                    <ListView
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/list_item_navigation">
+                    </ListView>
+                </LinearLayout>
+
             </LinearLayout>
 
         </com.google.android.material.navigation.NavigationView>

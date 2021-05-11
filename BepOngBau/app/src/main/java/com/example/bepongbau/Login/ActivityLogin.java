@@ -6,13 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.bepongbau.MainActivity;
+import com.example.bepongbau.Activity.MainActivity;
 import com.example.bepongbau.Model.User;
 import com.example.bepongbau.R;
 import com.google.firebase.database.DataSnapshot;
@@ -23,8 +24,9 @@ import com.google.firebase.database.ValueEventListener;
 
 public class ActivityLogin extends AppCompatActivity {
     Button btnLogin;
-    TextView txtDangki;
+    TextView txtDangki,hintPassword;
     EditText edtTenDangNhap, edtMatKhau;
+    private boolean isShow = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -112,13 +114,32 @@ public class ActivityLogin extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        hintPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                togglePass();
+            }
+        });
     }
 
     private void AnhXa() {
+        hintPassword = findViewById(R.id.hintPassword);
         btnLogin = findViewById(R.id.btnDongYDN);
         txtDangki = findViewById(R.id.txtDangKi);
         edtTenDangNhap = findViewById(R.id.edTenDangNhapDN);
         edtMatKhau = findViewById(R.id.edMatKhauDN);
     }
-
+    public boolean togglePass()
+    {
+        if(isShow){
+            edtMatKhau.setTransformationMethod(null);
+            isShow = !isShow;
+        }
+        else
+        {
+            isShow = !isShow;
+            edtMatKhau.setTransformationMethod(new PasswordTransformationMethod());
+        }
+        return isShow;
+    }
 }
